@@ -11,6 +11,10 @@ export default function AddMyCity({ position }) {
             lat: position.coords.latitude,
             lon: position.coords.longitude,
         })
+            .then(() => {
+                window.location.reload()
+            })
+            .catch(console.error)
     }
     return (
         <button
