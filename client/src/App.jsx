@@ -24,12 +24,14 @@ export default function App() {
 
     useEffect(() => {
         if (cards.length && position?.coords?.latitude) {
-            const index = cards.findIndex(function ({ coord: { lat, lon } }) {
-                return (
-                    lat == Number(position.coords.latitude).toFixed(4) &&
-                    lon == Number(position.coords.longitude).toFixed(4)
-                )
-            })
+            const TOLERANCE = 0.001,
+                index = cards.findIndex(function ({ coord: { lat, lon } }) {
+                    const latDifference = Math.abs(lat - Number(position.coords.latitude.toFixed(4))),
+                        lonDifference = Math.abs(lon - Number(position.coords.longitude.toFixed(4)))
+
+                    return latDifference <= TOLERANCE && lonDifference <= TOLERANCE
+                })
+
             setMyPositionIndex(index)
         }
     }, [cards, position])
