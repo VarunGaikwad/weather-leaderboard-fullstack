@@ -1,6 +1,6 @@
 # Weather Leaderboard Application
 
-![Weather Leaderboard](./screen/image.png)
+[![Weather Leaderboard](./screen/image.png)](https://weather-leaderboard.onrender.com/)
 
 A weather leaderboard application that displays the current weather and time for different cities, ranking them based on their temperature. The hottest cities are displayed at the top, and the temperatures are color-coded to visually represent how hot each city is.
 
