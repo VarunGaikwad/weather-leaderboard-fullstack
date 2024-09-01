@@ -14,11 +14,10 @@ function mongooseSuccessHandler() {
     app.use(cors({
         origin: "http://localhost:5173",
     }));
+    app.use(express.static("./client"))
     app.use(express.json());
     app.use(router);
-    app.use((_req, res) => {
-        res.status(404).sendFile(path.join(process.cwd(), "pages", "notFound.html"));
-    });
+    app.use((_req, res) => res.status(404).sendFile(path.join(process.cwd(), "pages", "notFound.html")));
     app.listen(PORT || 4004);
 }
 
