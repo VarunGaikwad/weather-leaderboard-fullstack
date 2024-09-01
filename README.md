@@ -1,6 +1,6 @@
 # Weather Leaderboard Application
 
-![Weather Leaderboard](https://weather-leaderboard.onrender.com/)
+![Weather Leaderboard](./screen/image.png)
 
 A weather leaderboard application that displays the current weather and time for different cities, ranking them based on their temperature. The hottest cities are displayed at the top, and the temperatures are color-coded to visually represent how hot each city is.
 
@@ -93,8 +93,8 @@ The backend server fetches weather data from the OpenWeatherMap API (or your wea
 
 ### Endpoints
 
--   **GET /weather**: Fetches weather data for all configured cities.
--   **POST /add-city**: Adds a new city to the leaderboard.
+-   **GET /api/weather**: Fetches weather data for all configured cities.
+-   **POST /api/weather**: Post lat and lon.
 
 ## Contributing
 
@@ -114,5 +114,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For any questions or feedback, please contact:
 
--   **Email**: your-email@example.com
--   **GitHub**: [your-username](https://github.com/your-username)
+-   **Email**: gaikwadvarun23@gmail.com
+-   **GitHub**: [VarunGaikwad](https://github.com/VarunGaikwad)
